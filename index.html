@@ -269,6 +269,755 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/Add-Digits/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Daniel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/04/Add-Digits/" itemprop="url">Add Digits</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T23:08:54+08:00">
+                2018-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Add-Digits"><a href="#Add-Digits" class="headerlink" title="Add Digits"></a>Add Digits</h2><p>Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.</p>
+<p>For example:</p>
+<p>Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.</p>
+<p>Follow up:<br>Could you do it without any loop/recursion in O(1) runtime?</p>
+<h3 id="solution-one"><a href="#solution-one" class="headerlink" title="solution one"></a>solution one</h3><p>没有想到不用循环的方法：先贴上自己做的</p>
+<pre><code>class Solution {
+    public int addDigits(int num) {
+        while(num &gt;9){
+            num = num%10 + num/10;
+        }
+        return num;
+    }
+}
+</code></pre><h3 id="solution-two"><a href="#solution-two" class="headerlink" title="solution two"></a>solution two</h3><p>这类运算非常熟悉，根据数学特性可以得到时间复杂度为O(1)的解法。</p>
+<pre><code>class Solution {
+    public int addDigits(int num) {
+        return 1 + (num - 1) % 9;
+    }
+}
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/Invert-Binary-Tree/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Daniel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/04/Invert-Binary-Tree/" itemprop="url">Invert Binary Tree</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T23:08:38+08:00">
+                2018-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Invert-Binary-Tree"><a href="#Invert-Binary-Tree" class="headerlink" title="Invert Binary Tree"></a>Invert Binary Tree</h2><p>Invert a binary tree.</p>
+<pre><code>     4
+   /   \
+  2     7
+ / \   / \
+1   3 6   9
+</code></pre><p>to</p>
+<pre><code>     4
+   /   \
+  7     2
+ / \   / \
+9   6 3   1
+</code></pre><h3 id="solution-one"><a href="#solution-one" class="headerlink" title="solution one"></a>solution one</h3><p>最开始想到了递归</p>
+<pre><code>class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        if(root == null){
+            return root;
+        }
+        TreeNode temp;
+        temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+
+        root.left = invertTree(root.left);
+        root.right = invertTree(root.right);
+        return root;
+    }
+}
+</code></pre><p>经过推算代码应该是通过的。</p>
+<pre><code>  2
+ / \   
+3   1
+</code></pre><p>要invert这课子树，其实是应该更换2节点内的指针，将他指向3节点和1节点的指针交换</p>
+<p>官方答案：</p>
+<pre><code>class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        if(root == null){
+            return root;
+        }            
+        TreeNode left = invertTree(root.left);
+        TreeNode right = invertTree(root.right);
+        root.right = left;
+        root.left = right;
+        return root;
+    }
+}
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/Maximum-Depth-of-Binary-Tree/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Daniel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/04/Maximum-Depth-of-Binary-Tree/" itemprop="url">Maximum Depth of Binary Tree</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T23:05:12+08:00">
+                2018-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Maximum-Depth-Of-BinaryTree"><a href="#Maximum-Depth-Of-BinaryTree" class="headerlink" title="Maximum Depth Of BinaryTree"></a>Maximum Depth Of BinaryTree</h2><p>Given a binary tree, find its maximum depth.</p>
+<p>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</p>
+<p>For example:<br>Given binary tree [3,9,20,null,null,15,7],</p>
+<pre><code>  3
+ / \
+9  20
+  /  \
+ 15   7
+</code></pre><p>return its depth = 3</p>
+<h3 id="solution-one"><a href="#solution-one" class="headerlink" title="solution one"></a>solution one</h3><p>这是数据结构里的题目直接的想法是递归,根据自己的理解和回忆写了第一遍代码：</p>
+<pre><code>class Solution {
+    public int maxDepth(TreeNode root) {
+        if(root!=null){
+            if(root.left != null){
+            return maxDepth(root.left)+1;
+            }
+            if(root.right != null){
+                return maxDepth(root.right)+1;
+            }     
+        }
+        if(root == null){
+            return 0;
+        }
+        return 0;
+    }
+}
+</code></pre><p>输出结果是1，因为还不熟悉leetcode，所以不知道这个结果对不对.</p>
+<p>事实证明结果是错误的：<br>在最后返回值的时候应该比较二叉树两个叉高度的大小，取高者加1（1为当前节点的高度）</p>
+<p>修改后的代码是：</p>
+<pre><code>class Solution {
+    public int maxDepth(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        int depth_left = maxDepth(root.left);
+        int depth_right = maxDepth(root.right);
+        return 1+Math.max(depth_left,depth_right);
+    }
+}
+</code></pre><p>因为是遍历树的每一个节点，所以时间复杂度是O(n),空间复杂度也是O(n)</p>
+<h3 id="solution-two"><a href="#solution-two" class="headerlink" title="solution two"></a>solution two</h3><p>第二种思路是非递归的方式求解，即：深度优先搜索DFS和广度优先搜索BFS。学数据结构的时候就嫌麻烦，没有实现。所以现在看博客补。</p>
+<p>DFS用栈，BFS用队列。</p>
+<p><strong>DFS</strong><br>用一个Integer的栈来存储每个子树当前的高度，用Integer变量max来存储当前的最大高度，用一个类型为TreeNode的栈来遍历二叉树。每遍历一层子树前，用max记录当前最大的高度。然后遍历子树，当子树存在时，各子树的高度加一，即value内的值。</p>
+<p>PS：有限入右子树，这样遍历的时候符合我们之前学习时候遍历的顺序</p>
+<pre><code>class Solution {
+    public int maxDepth(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;();
+        Stack&lt;Integer&gt; value = new Stack&lt;&gt;();
+        stack.push(root);
+        value.push(1);
+        int max = 0;
+        while(!stack.isEmpty()){
+            TreeNode node = stack.pop();
+            int temp = value.pop();
+            max = Math.max(temp,max);
+            if(node.right!=null){
+                stack.push(node.right);
+                value.push(temp+1);
+            }
+            if(node.left!=null){
+                stack.push(node.left);
+                value.push(temp+1);
+            }
+
+        }
+        return max;
+
+    }
+}
+</code></pre><p><strong>BFS</strong></p>
+<p>广度优先搜索用队列遍历二叉树，count存储遍历多少层即高度。</p>
+<pre><code>class Solution {
+    public int maxDepth(TreeNode root) {
+        if(root == null) {
+            return 0;
+        }
+        Queue&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;();
+        queue.offer(root);
+        int count = 0;
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+            while(size-- &gt; 0) {
+                TreeNode node = queue.poll();
+                if(node.left != null) {
+                    queue.offer(node.left);
+                }
+                if(node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+            count++;
+        }
+        return count;
+    }
+}
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/Leetcode-Single-Number/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Daniel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/04/Leetcode-Single-Number/" itemprop="url">LeetCode Single Number</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T22:45:38+08:00">
+                2018-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Single-Number"><a href="#Single-Number" class="headerlink" title="Single Number"></a>Single Number</h2><p>Given an array of integers, every element appears twice except for one. Find that single one.</p>
+<p>Note:<br>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?</p>
+<h3 id="solution-one"><a href="#solution-one" class="headerlink" title="solution one"></a>solution one</h3><p>最直接的想法暴力搜索，用数据结构里的栈，有点类似于括号匹配，但比括号匹配简单。首先将所有数字压栈，再pop第一个数入另一个栈。两层循环判断第一个栈pop出来的数字在第二个栈里有没有，有的话第二个栈内对应的数字删去，否则入栈。知道最后，原栈里的剩下的数就是SingleOne了。</p>
+<p>这个方法是无法通过的，时间复杂度为O(n^2)</p>
+<h3 id="solution-two"><a href="#solution-two" class="headerlink" title="solution two"></a>solution two</h3><p>可以利用python语言的特性计算：</p>
+<pre><code>2∗(a+b+c)−(a+a+b+b+c)=c
+
+class Solution(object):
+def singleNumber(self, nums):
+    &quot;&quot;&quot;
+    :type nums: List[int]
+    :rtype: int
+    &quot;&quot;&quot;
+    return 2 * sum(set(nums)) - sum(nums)
+</code></pre><p>对于Python的hashtable的特性还不熟悉</p>
+<h3 id="solution-three"><a href="#solution-three" class="headerlink" title="solution three"></a>solution three</h3><p>XOR异或</p>
+<pre><code>a⊕0=a
+
+a⊕a=0
+
+a⊕b⊕a=(a⊕a)⊕b=0⊕b=b
+</code></pre><p>程序中用于计算异或的符号是 <strong>“^”</strong><br>用异或计算就非常快速了，感觉像在解数学题。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -430,14 +1179,32 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
