@@ -272,6 +272,185 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/10/Leetcode-Generate-Parentheses/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Daniel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Daniel Personal Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/10/Leetcode-Generate-Parentheses/" itemprop="url">Leetcode: Generate Parentheses</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-10T09:58:20+08:00">
+                2018-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Generate-Parentheses"><a href="#Generate-Parentheses" class="headerlink" title="Generate Parentheses"></a>Generate Parentheses</h2><p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.</p>
+<p>For example, given n = 3, a solution set is:</p>
+<pre><code>[
+  &quot;((()))&quot;,
+  &quot;(()())&quot;,
+  &quot;(())()&quot;,
+  &quot;()(())&quot;,
+  &quot;()()()&quot;
+]
+</code></pre><h3 id="Solution-one"><a href="#Solution-one" class="headerlink" title="Solution one"></a>Solution one</h3><p>经过翻阅博客和discuss，我找到了比较容易理解的方法。这像是对某种二叉树的遍历，但还是找不到什么具体的规律。博客给的是一个这样的模型：</p>
+<pre><code>     /    \
+    (      )
+  /  \    /   \
+ (    )   (    )
+/ \  / \ / \  / \
+( )  ( ) (  ) (  )
+</code></pre><p> 对这个模型的每一种遍历就会得到一种结果。</p>
+<pre><code> class Solution {
+     public List&lt;String&gt; generateParenthesis(int n) {
+            List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+            backtrack(list, &quot;&quot;, 0, 0, n);
+            return list;
+        }
+
+        public void backtrack(List&lt;String&gt; list, String str, int open, int close, int max){
+
+            if(str.length() == max*2){
+                list.add(str);
+                return;
+            }
+
+            if(open &lt; max)
+                backtrack(list, str+&quot;(&quot;, open+1, close, max);
+            if(close &lt; open)
+                backtrack(list, str+&quot;)&quot;, open, close+1, max);
+        }
+}           
+</code></pre><p>目前理解尚不充分，之后后续会补充。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/08/Leetcode-Excel-Sheet-Column-Number/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1707,7 +1886,7 @@ a⊕b⊕a=(a⊕a)⊕b=0⊕b=b
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1729,7 +1908,7 @@ a⊕b⊕a=(a⊕a)⊕b=0⊕b=b
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>

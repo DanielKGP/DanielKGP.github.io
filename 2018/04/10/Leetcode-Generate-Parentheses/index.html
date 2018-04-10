@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="LeetCode," />
+  <meta name="keywords" content="Leetcode," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Add DigitsGiven a non-negative integer num, repeatedly add all its digits until the result has only one digit. For example: Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only">
-<meta name="keywords" content="LeetCode">
+<meta name="description" content="Generate ParenthesesGiven n pairs of parentheses, write a function to generate all combinations of well-formed parentheses. For example, given n = 3, a solution set is: [   &amp;quot;((()))&amp;quot;,   &amp;quot">
+<meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Add Digits">
-<meta property="og:url" content="http://yoursite.com/2018/04/04/Add-Digits/index.html">
+<meta property="og:title" content="Leetcode: Generate Parentheses">
+<meta property="og:url" content="http://yoursite.com/2018/04/10/Leetcode-Generate-Parentheses/index.html">
 <meta property="og:site_name" content="Daniel Personal Blog">
-<meta property="og:description" content="Add DigitsGiven a non-negative integer num, repeatedly add all its digits until the result has only one digit. For example: Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only">
+<meta property="og:description" content="Generate ParenthesesGiven n pairs of parentheses, write a function to generate all combinations of well-formed parentheses. For example, given n = 3, a solution set is: [   &amp;quot;((()))&amp;quot;,   &amp;quot">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-04-04T15:11:55.683Z">
+<meta property="og:updated_time" content="2018-04-10T01:59:44.697Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Add Digits">
-<meta name="twitter:description" content="Add DigitsGiven a non-negative integer num, repeatedly add all its digits until the result has only one digit. For example: Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only">
+<meta name="twitter:title" content="Leetcode: Generate Parentheses">
+<meta name="twitter:description" content="Generate ParenthesesGiven n pairs of parentheses, write a function to generate all combinations of well-formed parentheses. For example, given n = 3, a solution set is: [   &amp;quot;((()))&amp;quot;,   &amp;quot">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/04/Add-Digits/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/10/Leetcode-Generate-Parentheses/"/>
 
 
 
 
 
-  <title>Add Digits | Daniel Personal Blog</title>
+  <title>Leetcode: Generate Parentheses | Daniel Personal Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/Add-Digits/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/10/Leetcode-Generate-Parentheses/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Daniel">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Add Digits</h1>
+          <h1 class="post-title" itemprop="name headline">Leetcode: Generate Parentheses</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T23:08:54+08:00">
-                2018-04-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-10T09:58:20+08:00">
+                2018-04-10
               </time>
             
 
@@ -362,26 +362,45 @@
       
 
       
-        <h2 id="Add-Digits"><a href="#Add-Digits" class="headerlink" title="Add Digits"></a>Add Digits</h2><p>Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.</p>
-<p>For example:</p>
-<p>Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.</p>
-<p>Follow up:<br>Could you do it without any loop/recursion in O(1) runtime?</p>
-<h3 id="solution-one"><a href="#solution-one" class="headerlink" title="solution one"></a>solution one</h3><p>没有想到不用循环的方法：先贴上自己做的</p>
-<pre><code>class Solution {
-    public int addDigits(int num) {
-        while(num &gt;9){
-            num = num%10 + num/10;
+        <h2 id="Generate-Parentheses"><a href="#Generate-Parentheses" class="headerlink" title="Generate Parentheses"></a>Generate Parentheses</h2><p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.</p>
+<p>For example, given n = 3, a solution set is:</p>
+<pre><code>[
+  &quot;((()))&quot;,
+  &quot;(()())&quot;,
+  &quot;(())()&quot;,
+  &quot;()(())&quot;,
+  &quot;()()()&quot;
+]
+</code></pre><h3 id="Solution-one"><a href="#Solution-one" class="headerlink" title="Solution one"></a>Solution one</h3><p>经过翻阅博客和discuss，我找到了比较容易理解的方法。这像是对某种二叉树的遍历，但还是找不到什么具体的规律。博客给的是一个这样的模型：</p>
+<pre><code>     /    \
+    (      )
+  /  \    /   \
+ (    )   (    )
+/ \  / \ / \  / \
+( )  ( ) (  ) (  )
+</code></pre><p> 对这个模型的每一种遍历就会得到一种结果。</p>
+<pre><code> class Solution {
+     public List&lt;String&gt; generateParenthesis(int n) {
+            List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+            backtrack(list, &quot;&quot;, 0, 0, n);
+            return list;
         }
-        return num;
-    }
-}
-</code></pre><h3 id="solution-two"><a href="#solution-two" class="headerlink" title="solution two"></a>solution two</h3><p>这类运算非常熟悉，根据数学特性可以得到时间复杂度为O(1)的解法。</p>
-<pre><code>class Solution {
-    public int addDigits(int num) {
-        return 1 + (num - 1) % 9;
-    }
-}
-</code></pre>
+
+        public void backtrack(List&lt;String&gt; list, String str, int open, int close, int max){
+
+            if(str.length() == max*2){
+                list.add(str);
+                return;
+            }
+
+            if(open &lt; max)
+                backtrack(list, str+&quot;(&quot;, open+1, close, max);
+            if(close &lt; open)
+                backtrack(list, str+&quot;)&quot;, open, close+1, max);
+        }
+}           
+</code></pre><p>目前理解尚不充分，之后后续会补充。</p>
+
       
     </div>
     
@@ -398,7 +417,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
+            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
           
         </div>
       
@@ -411,8 +430,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/04/Invert-Binary-Tree/" rel="next" title="Invert Binary Tree">
-                <i class="fa fa-chevron-left"></i> Invert Binary Tree
+              <a href="/2018/04/08/Leetcode-Excel-Sheet-Column-Number/" rel="next" title="Leetcode: Excel Sheet Column Number">
+                <i class="fa fa-chevron-left"></i> Leetcode: Excel Sheet Column Number
               </a>
             
           </div>
@@ -420,10 +439,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/07/Leetcode-Move-Zeroes/" rel="prev" title="Leetcode: Move Zeroes">
-                Leetcode: Move Zeroes <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -555,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-Digits"><span class="nav-number">1.</span> <span class="nav-text">Add Digits</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#solution-one"><span class="nav-number">1.1.</span> <span class="nav-text">solution one</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#solution-two"><span class="nav-number">1.2.</span> <span class="nav-text">solution two</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Generate-Parentheses"><span class="nav-number">1.</span> <span class="nav-text">Generate Parentheses</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution-one"><span class="nav-number">1.1.</span> <span class="nav-text">Solution one</span></a></li></ol></li></ol></div>
             
 
           </div>
